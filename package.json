@@ -1,0 +1,14 @@
+{
+  "name": "node-1",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Mathew Thomas <mathew.thomas@longdivision.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "lodash": "4.17.5"
+  }
+}
