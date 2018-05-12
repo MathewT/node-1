@@ -18,7 +18,16 @@ app.get('/', (req, res) => {
 let user = os.userInfo();
 app.listen(PORT, HOST);
 
-notes.fetchAddress();
+// notes.fetchAddress("https://www.google.com/", (error, statusCode) => {
+//   console.log(`fetchAddress callback : ${statusCode}`);
+// });
+
+notes.asyncWork("foo")
+  .then((res) => {
+    console.log("Success!!", res);
+  }, (errorMsg) => {
+    console.log("Error: ", errorMsg);
+  });
 
 // console.log(`Running on http://${HOST}:${PORT} as user ${user.username}`);
 
